@@ -1,0 +1,62 @@
+
+    <!-- 
+    <div class="nav-bg">
+        <nav class="navegacion_principal contendor_in ">
+            <div class="text-white bg-success p-2"> 
+                <ul class ="menu-horizontal"> 
+                    <li><a href="#">Agregar</a></li>
+                    <li>
+                        <a href="#">Mostrar Datos</a> 
+                    </li>
+                    <li><a href="#">Editar</a></li>
+                    <li><a href="#">Eliminar</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="grid">
+        <h2 style="font-size: 35px;color: white;text-align: center;">CRUD Python y HTML </h2>
+        <p style="font-size: 30px;color: white;text-align: justify; text-align: justify; 
+        flex-direction: column; 
+        grid-column:1/2;">CRUD con Python, HTML y CSS <br> pagina conectada a base de datos en Mysql</p>
+        <div class="i" style="padding: 2rem;justify-content:center;">
+          <br>  <img class="logotipo" src="imagen/img.png"></div></div>
+        </div>
+    </div> -->
+    {% include 'cabecera.html' %}
+    <br>
+    <
+
+    <br><br><br>
+    <table class="table table-light" >
+        <thead style="background-color: darkcyan;color: white;">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Cargo</th>
+                <th>Correo</th>
+                <th>Modificacion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Obtener datos con Jinja2 -->
+            {% for datos in  datos%}
+            <tr>
+                <td>{{datos[1]}}</td>
+                <td>{{datos[2]}}</td>
+                <td>{{datos[3]}}</td>
+                <td>{{datos[4]}}</td>
+                <td>{{datos[5]}}</td>
+                <td>
+                    <a class="btn btn-warning" href="/editar/{{datos[0]}}">Editar</a> 
+                    <a class="btn btn-danger" href="/borrar/{{datos[0]}}">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+           
+        </tbody>
+    </table>
+</body>
+</html>

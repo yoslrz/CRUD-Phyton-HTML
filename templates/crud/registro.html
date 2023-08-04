@@ -1,0 +1,32 @@
+{% include 'cabecera.html' %}
+<br><br>
+<form method="post" action="/guardar">
+    <div class="card">
+        <div class="card-header" style="background-color: darkcyan;color: white;">
+            Ingrese los Datos:
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                <div class="form-group">
+                    <label for="my-input">Nombre</label>
+                    <input id="my-input" class="form-control" type="text" name="nombre" required>
+                    <label> Apellido Patero </label>
+                    <input class="form-control" type="text" name="apellido_pat" required>
+                    <label> Apellido Materno</label>
+                    <input class="form-control" type="text" name="apellido_mat" >
+                    <label>Cargo</label>
+                    <input class="form-control" type="text" name="cargo" required>
+                    <label>Correo</label>
+                    <input class="form-control" type="email" name="correo" required>
+                </div>
+                <div style="display: flex;justify-content: space-around;margin-top: 1rem;">
+                    <input class="btn btn-success" type="submit" value="Registrar" name="rgt"  style="width: 40%;">
+                    <input class="btn btn-danger" type="reset" value="Limpiar" name="borrar" style="width: 40%;">
+                </div>
+                
+
+            </p>
+        </div>
+    </div>
+    
+</form>
