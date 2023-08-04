@@ -18,6 +18,7 @@ mysql.init_app(app)
 CARPETA = os.path.join('imagen')
 app.config['CARPETA']= CARPETA
 
+#mostrar imagenes de la carpeta imagen 
 @app.route('/imagen/<nombre>')
 def imagen(nombre):
     return send_from_directory(app.config['CARPETA'],nombre)
